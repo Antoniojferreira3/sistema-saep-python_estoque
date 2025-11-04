@@ -1,0 +1,8 @@
+# .gitignore
+# Ignora o ambiente virtual
+venv/
+# Ignora caches do Python
+__pycache__/
+*.pyc
+# Ignora o arquivo de segredos
+.env

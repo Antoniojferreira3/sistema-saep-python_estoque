@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-4">
+        <h2>Registrar Movimentação</h2>
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <form action="{{ url_for('movimentar_estoque') }}" method="POST">
+                    <div class="mb-3">
+                        <label for="produto_id" class="form-label">Produto*</label>
+                        <select class="form-select" id="produto_id" name="produto_id" required>
+                            <option value="">Selecione um produto...</option>
+                            {% for p in produtos %}
+                            <option value="{{ p.id_produto }}">{{ p.nome }} (Atual: {{ p.quantidade_em_estoque }})</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tipo_movimento" class="form-label">Tipo de Movimentação*</label>
+                        <select class="form-select" id="tipo_movimento" name="tipo_movimento" required>
+                            <option value="entrada">Entrada</option>
+                            <option value="saida">Saída</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="quantidade" class="form-label">Quantidade*</label>
+                        <input type="number" class="form-control" id="quantidade" name="quantidade" min="1" required>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-success">Registrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <h2>Estoque Atual</h2>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Produto (Ordenado Alfabeticamente)</th>
+                        <th>Qtd. em Estoque</th>
+                        <th>Estoque Mínimo</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for p in produtos %}
+                        <tr class="{% if p.quantidade_em_estoque < p.estoque_minimo %}table-danger{% elif p.quantidade_em_estoque == p.estoque_minimo %}table-warning{% endif %}">
+                            <td>{{ p.nome }}</td>
+                            <td>{{ p.quantidade_em_estoque }}</td>
+                            <td>{{ p.estoque_minimo }}</td>
+                            <td>
+                                {% if p.quantidade_em_estoque < p.estoque_minimo %}
+                                <span class="badge bg-danger">ABAIXO DO MÍNIMO</span>
+                                {% elif p.quantidade_em_estoque == p.estoque_minimo %}
+                                <span class="badge bg-warning text-dark">ESTOQUE MÍNIMO</span>
+                                {% else %}
+                                <span class="badge bg-success">OK</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

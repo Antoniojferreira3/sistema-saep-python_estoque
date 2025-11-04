@@ -1,0 +1,10 @@
+/* static/css/style.css */
+/* Muda a cor de fundo do body para um cinza bem claro */
+body {
+    background-color: #f8f9fa;
+}
+
+/* Força a tela de login a ocupar a altura toda */
+.vh-100 {
+    min-height: 100vh;
+}

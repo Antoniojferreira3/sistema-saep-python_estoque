@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="p-5 mb-4 bg-white rounded-3 shadow-sm">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Bem-vindo, {{ session['user_name'] }}!</h1>
+            <p class="col-md-8 fs-4">
+                Este é o sistema de Gestão de Estoque de Equipamentos Eletrônicos.
+            </p>
+            <p>Use a barra de navegação acima para:</p>
+            <ul>
+                <li>
+                    <a href="{{ url_for('cadastro_produto') }}">Cadastrar e gerenciar produtos</a> (Entrega 6)
+                </li>
+                <li>
+                    <a href="{{ url_for('gestao_estoque') }}">Realizar entradas e saídas do estoque</a> (Entrega 7)
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
