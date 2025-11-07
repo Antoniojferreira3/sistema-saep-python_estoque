@@ -332,6 +332,28 @@ def movimentar_estoque():
 
     return redirect(url_for('gestao_estoque'))
 
+
+@app.route('/historico')
+def historico_movimentacoes():
+    import sqlite3
+
+    conexao = sqlite3.connect('saep_db.db')
+    cursor = conexao.cursor()
+
+    cursor.execute('''
+        SELECT h.id, p.nome, h.tipo_movimentacao, h.quantidade, 
+               h.responsavel, h.data_movimentacao
+        FROM historico_movimentacao h
+        JOIN produto p ON p.id_produto = h.id_produto
+        ORDER BY h.data_movimentacao DESC
+    ''')
+    historico = cursor.fetchall()
+    conexao.close()
+
+    return render_template('historico.html', historico=historico)
+
+
+
 # ==============================================================================
 # 6. Inicialização do Servidor
 # ==============================================================================

@@ -1,6 +1,7 @@
 /*
- * ARQUIVO SQL PARA SQLITE (Entrega 3)
- * Este script cria as tabelas e insere os dados iniciais.
+ * ARQUIVO SQL PARA SQLITE (Versão Ferramentas)
+ * Sistema: Sistema de Gestão de Estoque - SAEP
+ * Este script cria as tabelas e insere dados iniciais para o controle de ferramentas.
  */
 
 -- ===========================================
@@ -12,7 +13,6 @@ CREATE TABLE IF NOT EXISTS categoria (
     id_categoria INTEGER PRIMARY KEY AUTOINCREMENT,
     nome TEXT NOT NULL UNIQUE
 );
-
 -- Tabela: usuario
 CREATE TABLE IF NOT EXISTS usuario (
     id_usuario INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -57,17 +57,18 @@ CREATE TABLE IF NOT EXISTS movimento (
 
 -- ===========================================
 -- 2. Inserção de Dados Iniciais
--- (Os 'GO' foram removidos)
 -- ===========================================
 
 -- Categorias (Ignora se já existirem)
 INSERT OR IGNORE INTO categoria (nome) VALUES
-('Notebooks'),
-('Smartphones'),
-('Smart TVs');
+('Martelos'),
+('Chaves de Fenda'),
+('Alicates'),
+('Trenas'),
+('Chaves Inglesas');
 
 -- Usuários (Ignora se já existirem)
--- Seu hash bcrypt correto já está aqui
+-- Hashes de senha são placeholders e devem ser ajustados conforme seu sistema
 INSERT OR IGNORE INTO usuario (nome, login, senha_hash, cargo) VALUES
 ('Admin Almoxarifado', 'admin', '$2b$12$fobHyskDH/ASfL6TVTk/betdXre.OjLsuG7vCNRo5tmxN4YViNp82', 'Administrador'),
 ('Joao Silva', 'joao.silva', '$2b$10$hijklmnop...', 'Almoxarife'),
@@ -75,13 +76,16 @@ INSERT OR IGNORE INTO usuario (nome, login, senha_hash, cargo) VALUES
 
 -- Produtos (Ignora se já existirem)
 INSERT OR IGNORE INTO produto (nome, descricao, quantidade_em_estoque, estoque_minimo, localizacao, fk_id_categoria) VALUES
-('Notebook Gamer XPTO', '16GB RAM, SSD 512GB, Tela 15.6", 110v', 10, 5, 'Prateleira A-01', 1),
-('Smartphone TopModel', '128GB, 8GB RAM, Tela 6.5", Bivolt', 25, 10, 'Prateleira B-03', 2),
-('Smart TV 50" 4K', '50 polegadas, 4K UHD, Tizen OS, Bivolt', 8, 3, 'Prateleira C-05', 3);
+('Martelo de Unha 27mm', 'Cabo de madeira, cabeça de aço forjado, 500g', 15, 5, 'Prateleira A-01', 1),
+('Chave de Fenda Phillips 6"', 'Cabo emborrachado, ponta magnética', 30, 10, 'Prateleira B-03', 2),
+('Alicate Universal 8"', 'Revestimento isolante até 1000V, aço carbono', 20, 5, 'Prateleira C-05', 3),
+('Trena 5m', 'Trava automática, fita de aço com revestimento antiferrugem', 25, 8, 'Prateleira D-02', 4),
+('Chave Inglesa 12"', 'Ajuste rápido, aço cromo-vanádio', 12, 4, 'Prateleira E-01', 5);
 
 -- Movimentos (Ignora se já existirem)
--- O formato de data T (ISO8601) é perfeito para o SQLite
 INSERT OR IGNORE INTO movimento (tipo_movimento, quantidade, data_hora, fk_id_produto, fk_id_usuario) VALUES
-('entrada', 10, '2025-10-20T09:15:00', 1, 1),
-('entrada', 25, '2025-10-21T10:30:00', 2, 2),
-('saida', 2, '2025-10-22T14:00:00', 1, 3);
+('entrada', 15, '2025-11-01T09:15:00', 1, 1),
+('entrada', 30, '2025-11-02T10:30:00', 2, 2),
+('saida', 3, '2025-11-03T14:00:00', 1, 3),
+('entrada', 25, '2025-11-04T09:50:00', 4, 1),
+('saida', 2, '2025-11-05T15:20:00', 5, 2);

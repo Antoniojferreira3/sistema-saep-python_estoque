@@ -12,6 +12,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('gestao_estoque') }}">Gestão de Estoque</a>
                 </li>
+                <!-- Novo item de menu -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('historico_movimentacoes') }}">Histórico de Movimentações</a>
+                </li>
             </ul>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
@@ -20,7 +24,7 @@
                     </span>
                 </li>
                 <li class="nav-item">
-                     <a href="{{ url_for('logout') }}" class="btn btn-outline-light btn-sm">Logout</a>
+                    <a href="{{ url_for('logout') }}" class="btn btn-outline-light btn-sm">Logout</a>
                 </li>
             </ul>
         </div>

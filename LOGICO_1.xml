@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<MER>
+	<Informacoes>
+		<Posicao Left="0" Top="0"/>
+		<TotalItens Valor="56"/>
+		<Tipo Valor="LOGICO"/>
+		<Versao Valor="1.0.1"/>
+		<Autor Valor=""/>
+		<Observacao Valor=""/>
+	</Informacoes>
+	<Tabelas>
+    <Tabela nome="usuario" id="1">
+      <Left Valor="73"/>
+      <Top Valor="70"/>
+      <Width Valor="233"/>
+      <Height Valor="137"/>
+      <Fonte default="-1"/>
+      <Dicionario></Dicionario>
+      <Nula Valor="0"/>
+      <Observacao></Observacao>
+      <Anexos/>
+      <Color Valor="12632256"/>
+      <Campos>
+        <Campo nome="id-usuario" id="6">
+          <Left Valor="73"/>
+          <Top Valor="89"/>
+          <Width Valor="231"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="-1"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="Inteiro"/>
+          <TabOrigem Valor="0"/>
+        </Campo>
+        <Campo nome="nome" id="4">
+          <Left Valor="73"/>
+          <Top Valor="107"/>
+          <Width Valor="231"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="varchar"/>
+          <TabOrigem Valor="0"/>
+        </Campo>
+        <Campo nome="login" id="19">
+          <Left Valor="73"/>
+          <Top Valor="125"/>
+          <Width Valor="231"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="varchar, unique"/>
+          <TabOrigem Valor="0"/>
+        </Campo>
+        <Campo nome="senha_hash" id="20">
+          <Left Valor="73"/>
+          <Top Valor="143"/>
+          <Width Valor="231"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="varchar"/>
+          <TabOrigem Valor="0"/>
+        </Campo>
+        <Campo nome="cargo" id="21">
+          <Left Valor="73"/>
+          <Top Valor="161"/>
+          <Width Valor="231"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="varchar"/>
+          <TabOrigem Valor="0"/>
+        </Campo>
+      </Campos>
+    </Tabela>
+    <Tabela nome="produto" id="2">
+      <Left Valor="50"/>
+      <Top Valor="324"/>
+      <Width Valor="297"/>
+      <Height Valor="173"/>
+      <Fonte default="-1"/>
+      <Dicionario></Dicionario>
+      <Nula Valor="0"/>
+      <Observacao></Observacao>
+      <Anexos/>
+      <Color Valor="12632256"/>
+      <Campos>
+        <Campo nome="id_produto" id="9">
+          <Left Valor="50"/>
+          <Top Valor="343"/>
+          <Width Valor="295"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="-1"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="Inteiro"/>
+          <TabOrigem Valor="0"/>
+        </Campo>
+        <Campo nome="nome" id="10">
+          <Left Valor="50"/>
+          <Top Valor="361"/>
+          <Width Valor="295"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="varchar"/>
+          <TabOrigem Valor="0"/>
+        </Campo>
+        <Campo nome="descricao" id="11">
+          <Left Valor="50"/>
+          <Top Valor="379"/>
+          <Width Valor="295"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="text"/>
+          <TabOrigem Valor="0"/>
+        </Campo>
+        <Campo nome="quantidade_em_estoque" id="12">
+          <Left Valor="50"/>
+          <Top Valor="397"/>
+          <Width Valor="295"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="Inteiro"/>
+          <TabOrigem Valor="0"/>
+        </Campo>
+        <Campo nome="estoque_minimo" id="13">
+          <Left Valor="50"/>
+          <Top Valor="415"/>
+          <Width Valor="295"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="Inteiro"/>
+          <TabOrigem Valor="0"/>
+        </Campo>
+        <Campo nome="localizacao" id="14">
+          <Left Valor="50"/>
+          <Top Valor="433"/>
+          <Width Valor="295"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="varchar"/>
+          <TabOrigem Valor="0"/>
+        </Campo>
+        <Campo nome="fk_id_categoria" id="15">
+          <Left Valor="50"/>
+          <Top Valor="451"/>
+          <Width Valor="295"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="-1"/>
+          <Tipo Valor="Inteiro"/>
+          <TabOrigem Valor="0"/>
+        </Campo>
+      </Campos>
+    </Tabela>
+    <Tabela nome="movimento" id="3">
+      <Left Valor="436"/>
+      <Top Valor="58"/>
+      <Width Valor="205"/>
+      <Height Valor="160"/>
+      <Fonte default="-1"/>
+      <Dicionario></Dicionario>
+      <Nula Valor="0"/>
+      <Observacao></Observacao>
+      <Anexos/>
+      <Color Valor="12632256"/>
+      <Campos>
+        <Campo nome="id_movimento" id="7">
+          <Left Valor="436"/>
+          <Top Valor="77"/>
+          <Width Valor="203"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="-1"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="Inteiro"/>
+          <TabOrigem Valor="0"/>
+        </Campo>
+        <Campo nome="tipo_movimento" id="8">
+          <Left Valor="436"/>
+          <Top Valor="95"/>
+          <Width Valor="203"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="varchar"/>
+          <TabOrigem Valor="0"/>
+        </Campo>
+        <Campo nome="quantidade" id="22">
+          <Left Valor="436"/>
+          <Top Valor="113"/>
+          <Width Valor="203"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="Inteiro"/>
+          <TabOrigem Valor="0"/>
+        </Campo>
+        <Campo nome="data_hora" id="23">
+          <Left Valor="436"/>
+          <Top Valor="131"/>
+          <Width Valor="203"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="datetime"/>
+          <TabOrigem Valor="0"/>
+        </Campo>
+        <Campo nome="fk_id_produto" id="25">
+          <Left Valor="436"/>
+          <Top Valor="149"/>
+          <Width Valor="203"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="-1"/>
+          <Tipo Valor="Inteiro"/>
+          <TabOrigem Valor="0"/>
+        </Campo>
+        <Campo nome="fk_id_usuario" id="26">
+          <Left Valor="436"/>
+          <Top Valor="167"/>
+          <Width Valor="203"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="-1"/>
+          <Tipo Valor="Inteiro"/>
+          <TabOrigem Valor="0"/>
+        </Campo>
+      </Campos>
+    </Tabela>
+    <Tabela nome="categoria" id="16">
+      <Left Valor="495"/>
+      <Top Valor="366"/>
+      <Width Valor="200"/>
+      <Height Valor="88"/>
+      <Fonte default="-1"/>
+      <Dicionario></Dicionario>
+      <Nula Valor="0"/>
+      <Observacao></Observacao>
+      <Anexos/>
+      <Color Valor="12632256"/>
+      <Campos>
+        <Campo nome="id_caregoria" id="17">
+          <Left Valor="495"/>
+          <Top Valor="385"/>
+          <Width Valor="198"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="-1"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="Inteiro"/>
+          <TabOrigem Valor="0"/>
+        </Campo>
+        <Campo nome="nome" id="18">
+          <Left Valor="495"/>
+          <Top Valor="403"/>
+          <Width Valor="198"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="varchar, unique"/>
+          <TabOrigem Valor="0"/>
+        </Campo>
+      </Campos>
+    </Tabela>
+  </Tabelas>
+	<LigacaoEntreTabelas>
+    <LigaTabela nome="usuario_movimento_1" id="27">
+      <Left Valor="377"/>
+      <Top Valor="133"/>
+      <Width Valor="10"/>
+      <Height Valor="10"/>
+      <Fonte default="-1"/>
+      <Dicionario></Dicionario>
+      <Nula Valor="0"/>
+      <Observacao></Observacao>
+      <Anexos/>
+      <Ligacoes>
+        <Ligacao Destino_ID="1">
+          <MostraCardinalidade Valor="-1" Card_id="28"/>
+          <Cardinalidades Cardinalidade="1">
+            <Cardinalidade nome="" id="28">
+              <Left Valor="306"/>
+              <Top Valor="123"/>
+              <Width Valor="40"/>
+              <Height Valor="20"/>
+              <Fonte default="-1"/>
+              <Dicionario></Dicionario>
+              <Nula Valor="0"/>
+              <Observacao></Observacao>
+              <Anexos/>
+              <Cor Valor="15780518"/>
+              <TamAuto Valor="-1"/>
+              <Tipo Valor="0"/>
+              <TextAlin Valor="0"/>
+              <Card Valor="1"/>
+              <Fixa Valor="0"/>
+              <Ligacoes/>
+            </Cardinalidade>
+          </Cardinalidades>
+          <Orientacao Valor="0"/>
+          <Fraca Valor="0"/>
+        </Ligacao>
+        <Ligacao Destino_ID="3">
+          <MostraCardinalidade Valor="-1" Card_id="29"/>
+          <Cardinalidades Cardinalidade="3">
+            <Cardinalidade nome="" id="29">
+              <Left Valor="398"/>
+              <Top Valor="123"/>
+              <Width Valor="40"/>
+              <Height Valor="20"/>
+              <Fonte default="-1"/>
+              <Dicionario></Dicionario>
+              <Nula Valor="0"/>
+              <Observacao></Observacao>
+              <Anexos/>
+              <Cor Valor="15780518"/>
+              <TamAuto Valor="-1"/>
+              <Tipo Valor="0"/>
+              <TextAlin Valor="0"/>
+              <Card Valor="3"/>
+              <Fixa Valor="0"/>
+              <Ligacoes/>
+            </Cardinalidade>
+          </Cardinalidades>
+          <Orientacao Valor="0"/>
+          <Fraca Valor="0"/>
+        </Ligacao>
+      </Ligacoes>
+    </LigaTabela>
+    <LigaTabela nome="categoria_produto_1" id="30">
+      <Left Valor="408"/>
+      <Top Valor="405"/>
+      <Width Valor="10"/>
+      <Height Valor="10"/>
+      <Fonte default="-1"/>
+      <Dicionario></Dicionario>
+      <Nula Valor="0"/>
+      <Observacao></Observacao>
+      <Anexos/>
+      <Ligacoes>
+        <Ligacao Destino_ID="16">
+          <MostraCardinalidade Valor="-1" Card_id="31"/>
+          <Cardinalidades Cardinalidade="1">
+            <Cardinalidade nome="" id="31">
+              <Left Valor="457"/>
+              <Top Valor="395"/>
+              <Width Valor="40"/>
+              <Height Valor="20"/>
+              <Fonte default="-1"/>
+              <Dicionario></Dicionario>
+              <Nula Valor="0"/>
+              <Observacao></Observacao>
+              <Anexos/>
+              <Cor Valor="15780518"/>
+              <TamAuto Valor="-1"/>
+              <Tipo Valor="0"/>
+              <TextAlin Valor="0"/>
+              <Card Valor="1"/>
+              <Fixa Valor="0"/>
+              <Ligacoes/>
+            </Cardinalidade>
+          </Cardinalidades>
+          <Orientacao Valor="0"/>
+          <Fraca Valor="0"/>
+        </Ligacao>
+        <Ligacao Destino_ID="2">
+          <MostraCardinalidade Valor="-1" Card_id="32"/>
+          <Cardinalidades Cardinalidade="3">
+            <Cardinalidade nome="" id="32">
+              <Left Valor="347"/>
+              <Top Valor="395"/>
+              <Width Valor="40"/>
+              <Height Valor="20"/>
+              <Fonte default="-1"/>
+              <Dicionario></Dicionario>
+              <Nula Valor="0"/>
+              <Observacao></Observacao>
+              <Anexos/>
+              <Cor Valor="15780518"/>
+              <TamAuto Valor="-1"/>
+              <Tipo Valor="0"/>
+              <TextAlin Valor="0"/>
+              <Card Valor="3"/>
+              <Fixa Valor="0"/>
+              <Ligacoes/>
+            </Cardinalidade>
+          </Cardinalidades>
+          <Orientacao Valor="0"/>
+          <Fraca Valor="0"/>
+        </Ligacao>
+      </Ligacoes>
+    </LigaTabela>
+    <LigaTabela nome="produto_movimento_1" id="33">
+      <Left Valor="193"/>
+      <Top Valor="246"/>
+      <Width Valor="10"/>
+      <Height Valor="10"/>
+      <Fonte default="-1"/>
+      <Dicionario></Dicionario>
+      <Nula Valor="0"/>
+      <Observacao></Observacao>
+      <Anexos/>
+      <Ligacoes>
+        <Ligacao Destino_ID="2">
+          <MostraCardinalidade Valor="-1" Card_id="34"/>
+          <Cardinalidades Cardinalidade="1">
+            <Cardinalidade nome="" id="34">
+              <Left Valor="198"/>
+              <Top Valor="309"/>
+              <Width Valor="40"/>
+              <Height Valor="20"/>
+              <Fonte default="-1"/>
+              <Dicionario></Dicionario>
+              <Nula Valor="0"/>
+              <Observacao></Observacao>
+              <Anexos/>
+              <Cor Valor="15780518"/>
+              <TamAuto Valor="-1"/>
+              <Tipo Valor="0"/>
+              <TextAlin Valor="0"/>
+              <Card Valor="1"/>
+              <Fixa Valor="0"/>
+              <Ligacoes/>
+            </Cardinalidade>
+          </Cardinalidades>
+          <Orientacao Valor="0"/>
+          <Fraca Valor="0"/>
+        </Ligacao>
+        <Ligacao Destino_ID="3">
+          <MostraCardinalidade Valor="-1" Card_id="35"/>
+          <Cardinalidades Cardinalidade="3">
+            <Cardinalidade nome="" id="35">
+              <Left Valor="538"/>
+              <Top Valor="219"/>
+              <Width Valor="40"/>
+              <Height Valor="20"/>
+              <Fonte default="-1"/>
+              <Dicionario></Dicionario>
+              <Nula Valor="0"/>
+              <Observacao></Observacao>
+              <Anexos/>
+              <Cor Valor="15780518"/>
+              <TamAuto Valor="-1"/>
+              <Tipo Valor="0"/>
+              <TextAlin Valor="0"/>
+              <Card Valor="3"/>
+              <Fixa Valor="0"/>
+              <Ligacoes/>
+            </Cardinalidade>
+          </Cardinalidades>
+          <Orientacao Valor="0"/>
+          <Fraca Valor="0"/>
+        </Ligacao>
+      </Ligacoes>
+    </LigaTabela>
+  </LigacaoEntreTabelas>
+	<Texto>
+	</Texto>
+</MER>
